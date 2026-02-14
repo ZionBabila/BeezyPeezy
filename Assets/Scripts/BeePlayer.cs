@@ -28,10 +28,10 @@ public class BeePlayer : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         mainCamera = Camera.main;
 
-        // Ensure gravity is zero as requested
+        // Ensure gravity is zero
         rb.gravityScale = 0;
 
-        // Initialize target position to current position
+        // Initialize target position
         targetPosition = rb.position;
     }
 
@@ -47,45 +47,43 @@ public class BeePlayer : MonoBehaviour
 
     void HandleInput()
     {
-        // Input.GetMouseButton(0) works for both Mouse Click (PC) and Single Touch (Mobile)
+        // Input logic (Mouse or Touch)
         if (Input.GetMouseButton(0))
         {
-            // Convert screen pixel coordinates to world coordinates
             Vector3 touchPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-
-            // Clamp the X position to keep the bee within screen width
+            
+            // Clamp movement within screen boundaries
             float clampedX = Mathf.Clamp(touchPosition.x, -xLimit, xLimit);
-
-            // Clamp the Y position to limit vertical movement based on Inspector settings
             float clampedY = Mathf.Clamp(touchPosition.y, minY, maxY);
 
-            // Set the new target position
             targetPosition = new Vector2(clampedX, clampedY);
-        }
-        else
-        {
-            // Optional: If no input is detected, you can choose to stop the bee 
-            // or let it drift. Currently, it stays at the last targetPosition.
         }
     }
 
     void MoveBee()
     {
-        // Smoothly move the Rigidbody towards the target position
         Vector2 smoothedPosition = Vector2.Lerp(rb.position, targetPosition, smoothSpeed * Time.fixedDeltaTime);
         rb.MovePosition(smoothedPosition);
     }
 
-    // Collision detection logic
+    // --- Collision Logic ---
+
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Case 1: Hit floating pollen -> Collect it
         if (other.CompareTag("Pollen"))
         {
             CollectPollen(other.gameObject);
         }
+        // Case 2: Hit an empty flower -> Try to deposit pollen
         else if (other.CompareTag("Flower"))
         {
             DepositPollen(other.gameObject);
+        }
+        // Case 3: Hit a flower that already has pollen -> Do nothing (or feedback)
+        else if (other.CompareTag("FullFlower"))
+        {
+            Debug.Log("Interaction ignored: Flower is already full.");
         }
     }
 
@@ -94,9 +92,14 @@ public class BeePlayer : MonoBehaviour
         if (!hasPollen)
         {
             hasPollen = true;
-            // Add visual feedback or sound here
-            Debug.Log("Pollen Collected"); 
+            Debug.Log("Pollen Collected!");
+            
+            // Destroy the pollen object to simulate picking it up
             Destroy(pollenObj);
+        }
+        else
+        {
+            Debug.Log("Cannot collect: Player already has pollen.");
         }
     }
 
@@ -105,8 +108,15 @@ public class BeePlayer : MonoBehaviour
         if (hasPollen)
         {
             hasPollen = false;
-            // Add score or visual feedback here
-            Debug.Log("Pollen Deposited");
+            Debug.Log("Success: Pollen Deposited on Empty Flower!");
+
+            // Visual feedback: Destroy the empty flower 
+            // (In a real game, you might swap the sprite to a 'Full Flower' instead)
+            Destroy(flowerObj);
+        }
+        else
+        {
+            Debug.Log("Failed: Hit Empty Flower, but player has no pollen.");
         }
     }
 }
