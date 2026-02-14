@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5465474539521512152}
   m_Layer: 0
   m_Name: Fl3
-  m_TagString: Flower
+  m_TagString: FullFlower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4348998787723138870}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5663209, y: 2.626386, z: -0.056398306}
+  m_LocalPosition: {x: 1.5663209, y: 2.626386, z: 0}
   m_LocalScale: {x: 0.5641, y: 0.5641, z: 0.5641}
   m_ConstrainProportionsScale: 0
   m_Children: []
