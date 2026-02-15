@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 
 [System.Serializable]
 public class FlowerDefinition
@@ -18,6 +20,9 @@ public class FlowerDefinition
 
 public class GameManager : MonoBehaviour
 {
+    [Header("---UI Settings---")]
+    [SerializeField] private TextMeshProUGUI scoreText;
+    private int score = 0;
     public static GameManager Instance;
 
     [Header("--- Spawning Logic ---")]
@@ -40,6 +45,10 @@ public class GameManager : MonoBehaviour
     { 
         Instance = this; 
         currentSpawnRate = initialSpawnRate;
+    }
+    void Start()
+    {
+        UpdateScoreUI();
     }
 
     void Update()
@@ -134,10 +143,22 @@ public class GameManager : MonoBehaviour
             {
                 player.ResetPollen();
                 flowerState.SetVisualState(true);
+                AddScore(1); // Example scoring
             }
         }
     }
-
+    private void AddScore(int amount)
+    {
+        score += amount;
+        UpdateScoreUI();
+    }   
+private void UpdateScoreUI()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + score;
+        }
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
