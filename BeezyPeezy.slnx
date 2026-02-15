@@ -1,5 +1,3 @@
 ﻿<Solution>
-  <Project Path="Modoium.Service.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
-  <Project Path="Modoium.Service.Editor.csproj" />
 </Solution>
