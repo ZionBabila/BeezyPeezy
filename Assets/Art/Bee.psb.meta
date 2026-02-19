@@ -71,9 +71,9 @@ ScriptedImporter:
     textureFormatSet: 0
     applyGammaDecoding: 0
   singleSpriteImportData:
-  - name: 
+  - name: Bee_1
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -81,8 +81,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 0
       y: 0
-      width: 0
-      height: 0
+      width: 349
+      height: 422
     spriteID: 19b7232ed6d8c514aa866c31a3ca2e74
     spriteBone: []
     spriteOutline: []
@@ -333,9 +333,69 @@ ScriptedImporter:
     characterGroups: []
     pivot: {x: 0, y: 0}
     boneReadOnly: 0
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: iPhone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   mosaicLayers: 1
-  characterMode: 1
+  characterMode: 0
   documentPivot: {x: 0, y: 0}
   documentAlignment: 7
   importHiddenLayers: 0
@@ -354,20 +414,10 @@ ScriptedImporter:
   resliceFromLayer: 0
   pSDLayerImportSetting: []
   psdLayers:
-  - name: Bee
-    spriteName: 
-    isGroup: 1
-    parentIndex: -1
-    spriteID: 79a29b1cbfdc1b44faf2e90006b54384
-    layerID: 16
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 1
   - name: wing R
     spriteName: wing R
     isGroup: 0
-    parentIndex: 0
+    parentIndex: -1
     spriteID: 751704e1ac970594dbce2552d7215ee4
     layerID: 15
     mosaicPosition: {x: 4, y: 277}
@@ -377,7 +427,7 @@ ScriptedImporter:
   - name: wing L
     spriteName: wing L
     isGroup: 0
-    parentIndex: 0
+    parentIndex: -1
     spriteID: b62334d7c53dc7745a5ee6011699266e
     layerID: 13
     mosaicPosition: {x: 4, y: 393}
@@ -387,7 +437,7 @@ ScriptedImporter:
   - name: mahosh r
     spriteName: mahosh r
     isGroup: 0
-    parentIndex: 0
+    parentIndex: -1
     spriteID: cd973bab244688846b818975467e0299
     layerID: 11
     mosaicPosition: {x: 159, y: 393}
@@ -397,7 +447,7 @@ ScriptedImporter:
   - name: mahosh l
     spriteName: mahosh l
     isGroup: 0
-    parentIndex: 0
+    parentIndex: -1
     spriteID: 42553a1a568d7974f8b928ed13cdced9
     layerID: 10
     mosaicPosition: {x: 164, y: 277}
@@ -407,7 +457,7 @@ ScriptedImporter:
   - name: Leg RF
     spriteName: Leg RF
     isGroup: 0
-    parentIndex: 0
+    parentIndex: -1
     spriteID: 1f017a4e224e50a45ac387a7be82edd0
     layerID: 9
     mosaicPosition: {x: 201, y: 4}
@@ -417,7 +467,7 @@ ScriptedImporter:
   - name: Leg LF
     spriteName: Leg LF
     isGroup: 0
-    parentIndex: 0
+    parentIndex: -1
     spriteID: 37958274aee087041931134509e3c623
     layerID: 8
     mosaicPosition: {x: 207, y: 393}
@@ -427,7 +477,7 @@ ScriptedImporter:
   - name: Leg RB
     spriteName: Leg RB
     isGroup: 0
-    parentIndex: 0
+    parentIndex: -1
     spriteID: 959d6b9349a86e54a91d06ed5c5d278e
     layerID: 7
     mosaicPosition: {x: 214, y: 277}
@@ -437,7 +487,7 @@ ScriptedImporter:
   - name: Leg LB
     spriteName: Leg LB
     isGroup: 0
-    parentIndex: 0
+    parentIndex: -1
     spriteID: b025e8eb7f4e73149a4f801d9295b7ad
     layerID: 6
     mosaicPosition: {x: 201, y: 72}
@@ -447,7 +497,7 @@ ScriptedImporter:
   - name: Sting
     spriteName: Sting
     isGroup: 0
-    parentIndex: 0
+    parentIndex: -1
     spriteID: dc2349b00aad4d04b9ca89b73b8ba0eb
     layerID: 5
     mosaicPosition: {x: 201, y: 143}
@@ -457,12 +507,22 @@ ScriptedImporter:
   - name: Body
     spriteName: Body
     isGroup: 0
-    parentIndex: 0
+    parentIndex: -1
     spriteID: 8685d819a15d37246a6d4afc1c18a89a
     layerID: 4
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
+    isVisible: 1
+  - name: Bee
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 79a29b1cbfdc1b44faf2e90006b54384
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
     isVisible: 1
   - name: Background
     spriteName: 
