@@ -1,0 +1,958 @@
+fileFormatVersion: 2
+guid: f62e2ebcfaa355c409890fee7f06918a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 3802971e974a4cc4da84e3cb68900f08
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: mouth hungry
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 839
+      y: 331
+      width: 88
+      height: 111
+    spriteID: 9c29a60da0204604985aad921444b627
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 839, y: 331}
+    spritePosition: {x: 201, y: 140}
+  - name: mouth full
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 240
+      width: 174
+      height: 83
+    spriteID: 807a3930b2807504bb7f5783a1d40390
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 240}
+    spritePosition: {x: 153, y: 145}
+  - name: mouth happy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 935
+      y: 434
+      width: 38
+      height: 44
+    spriteID: 3917fea249a6f4145bd8e6abf9d97245
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 935, y: 434}
+    spritePosition: {x: 285, y: 178}
+  - name: mouth
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 546
+      y: 240
+      width: 81
+      height: 55
+    spriteID: ac046651e6a682c45a562f808b838419
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 546, y: 240}
+    spritePosition: {x: 205, y: 147}
+  - name: eyes hungry pupil
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 978
+      y: 4
+      width: 24
+      height: 29
+    spriteID: 6d695e93ab77bd64a8c48563d3f9e48b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 978, y: 4}
+    spritePosition: {x: 191, y: 270}
+  - name: eyes hungry
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 586
+      y: 331
+      width: 156
+      height: 69
+    spriteID: 08376d6aacb41bf498c578896b8cac55
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 586, y: 331}
+    spritePosition: {x: 168, y: 246}
+  - name: eyes hungry2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 586
+      y: 408
+      width: 153
+      height: 50
+    spriteID: 7a61aaf840026db4aa6c5c69f56534a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 586, y: 408}
+    spritePosition: {x: 169, y: 248}
+  - name: eyes close
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 410
+      y: 240
+      width: 128
+      height: 46
+    spriteID: 67280ccfc449d4249b25a35959bd91ca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 410, y: 240}
+    spritePosition: {x: 183, y: 263}
+  - name: pupil full l
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 978
+      y: 41
+      width: 24
+      height: 22
+    spriteID: 5db6f01d570c22c42828079f3ae8a23f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 978, y: 41}
+    spritePosition: {x: 192, y: 277}
+  - name: pupil full R
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 839
+      y: 450
+      width: 30
+      height: 27
+    spriteID: e258f146ecdbafb42a32b4d8baf73b47
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 839, y: 450}
+    spritePosition: {x: 276, y: 277}
+  - name: eyes full
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 793
+      y: 122
+      width: 163
+      height: 91
+    spriteID: 0a1dc2a28099de74b9bfc9ffefc21b52
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 793, y: 122}
+    spritePosition: {x: 164, y: 242}
+  - name: Pupil1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 981
+      y: 434
+      width: 29
+      height: 29
+    spriteID: 6cbaaac6ac6034c4b824afc93fd57871
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 981, y: 434}
+    spritePosition: {x: 273, y: 273}
+  - name: eye1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 935
+      y: 331
+      width: 82
+      height: 95
+    spriteID: 339ddccb48d0c4c4a8dac1154ea4c535
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 935, y: 331}
+    spritePosition: {x: 248, y: 241}
+  - name: pupil2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 877
+      y: 450
+      width: 26
+      height: 30
+    spriteID: da617b5849c3a774eaceef54d20075be
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 877, y: 450}
+    spritePosition: {x: 184, y: 273}
+  - name: eye2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 793
+      y: 4
+      width: 177
+      height: 110
+    spriteID: 9708744936509564d9199af8e4f4a534
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 793, y: 4}
+    spritePosition: {x: 156, y: 226}
+  - name: head
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 240
+      width: 216
+      height: 241
+    spriteID: 8b958f2d777d90245b97aef6538ae88a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 240}
+    spritePosition: {x: 135, y: 127}
+  - name: Group 8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 472
+      y: 331
+      width: 106
+      height: 126
+    spriteID: 44676434895199846a3aba55957485e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 472, y: 331}
+    spritePosition: {x: 92, y: 64}
+  - name: Group 7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 331
+      width: 103
+      height: 132
+    spriteID: f14d9513f6f6c0c449b790dcfbcf6b60
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 331}
+    spritePosition: {x: 289, y: 309}
+  - name: Group 6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 649
+      width: 64
+      height: 157
+    spriteID: a116405bbe59ff148aa621ace0bbb30e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 649}
+    spritePosition: {x: 197, y: 330}
+  - name: Group 5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 750
+      y: 331
+      width: 81
+      height: 129
+    spriteID: d5bd9c7eb7e78d347bb32bfaa4d46130
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 750, y: 331}
+    spritePosition: {x: 134, y: 326}
+  - name: Group 4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 339
+      y: 331
+      width: 125
+      height: 107
+    spriteID: 73cb95b32bfb32346aec71490b1e80bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 339, y: 331}
+    spritePosition: {x: 308, y: 270}
+  - name: Group 3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 489
+      width: 72
+      height: 152
+    spriteID: 6e62f563b44e598408c08be683775c29
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 489}
+    spritePosition: {x: 165, y: 16}
+  - name: Group 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 489
+      width: 72
+      height: 152
+    spriteID: 9acf50a5d6018a4418817d92bb2e3daf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 489}
+    spritePosition: {x: 250, y: 325}
+  - name: big leaf2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 564
+      y: 4
+      width: 221
+      height: 195
+    spriteID: e57a1cd9b1d304447907ad8dfcf3846d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 564, y: 4}
+    spritePosition: {x: 2, y: 27}
+  - name: big leaf1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 552
+      height: 228
+    spriteID: ebd2d41cecaecff47995819cb8e7c3c5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 29, y: 86}
+  spriteImportData: []
+  rigSpriteImportData: []
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  padding: 4
+  spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: mouth hungry
+    spriteName: mouth hungry
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9c29a60da0204604985aad921444b627
+    layerID: 86
+    mosaicPosition: {x: 839, y: 331}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: mouth full
+    spriteName: mouth full
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 807a3930b2807504bb7f5783a1d40390
+    layerID: 82
+    mosaicPosition: {x: 228, y: 240}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: mouth happy
+    spriteName: mouth happy
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3917fea249a6f4145bd8e6abf9d97245
+    layerID: 78
+    mosaicPosition: {x: 935, y: 434}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: mouth
+    spriteName: mouth
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ac046651e6a682c45a562f808b838419
+    layerID: 75
+    mosaicPosition: {x: 546, y: 240}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: eyes hungry pupil
+    spriteName: eyes hungry pupil
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6d695e93ab77bd64a8c48563d3f9e48b
+    layerID: 71
+    mosaicPosition: {x: 978, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: eyes hungry
+    spriteName: eyes hungry
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 08376d6aacb41bf498c578896b8cac55
+    layerID: 70
+    mosaicPosition: {x: 586, y: 331}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: eyes hungry2
+    spriteName: eyes hungry2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7a61aaf840026db4aa6c5c69f56534a5
+    layerID: 67
+    mosaicPosition: {x: 586, y: 408}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: eyes close
+    spriteName: eyes close
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 67280ccfc449d4249b25a35959bd91ca
+    layerID: 63
+    mosaicPosition: {x: 410, y: 240}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pupil full l
+    spriteName: pupil full l
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5db6f01d570c22c42828079f3ae8a23f
+    layerID: 59
+    mosaicPosition: {x: 978, y: 41}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pupil full R
+    spriteName: pupil full R
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e258f146ecdbafb42a32b4d8baf73b47
+    layerID: 58
+    mosaicPosition: {x: 839, y: 450}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: eyes full
+    spriteName: eyes full
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0a1dc2a28099de74b9bfc9ffefc21b52
+    layerID: 57
+    mosaicPosition: {x: 793, y: 122}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Pupil1
+    spriteName: Pupil1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6cbaaac6ac6034c4b824afc93fd57871
+    layerID: 53
+    mosaicPosition: {x: 981, y: 434}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: eye1
+    spriteName: eye1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 339ddccb48d0c4c4a8dac1154ea4c535
+    layerID: 52
+    mosaicPosition: {x: 935, y: 331}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pupil2
+    spriteName: pupil2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: da617b5849c3a774eaceef54d20075be
+    layerID: 50
+    mosaicPosition: {x: 877, y: 450}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: eye2
+    spriteName: eye2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9708744936509564d9199af8e4f4a534
+    layerID: 49
+    mosaicPosition: {x: 793, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: head
+    spriteName: head
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8b958f2d777d90245b97aef6538ae88a
+    layerID: 44
+    mosaicPosition: {x: 4, y: 240}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Group 8
+    spriteName: Group 8
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 44676434895199846a3aba55957485e6
+    layerID: 39
+    mosaicPosition: {x: 472, y: 331}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Group 7
+    spriteName: Group 7
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f14d9513f6f6c0c449b790dcfbcf6b60
+    layerID: 35
+    mosaicPosition: {x: 228, y: 331}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Group 6
+    spriteName: Group 6
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a116405bbe59ff148aa621ace0bbb30e
+    layerID: 31
+    mosaicPosition: {x: 4, y: 649}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Group 5
+    spriteName: Group 5
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d5bd9c7eb7e78d347bb32bfaa4d46130
+    layerID: 27
+    mosaicPosition: {x: 750, y: 331}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Group 4
+    spriteName: Group 4
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 73cb95b32bfb32346aec71490b1e80bf
+    layerID: 23
+    mosaicPosition: {x: 339, y: 331}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Group 3
+    spriteName: Group 3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6e62f563b44e598408c08be683775c29
+    layerID: 19
+    mosaicPosition: {x: 4, y: 489}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Group 2
+    spriteName: Group 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9acf50a5d6018a4418817d92bb2e3daf
+    layerID: 15
+    mosaicPosition: {x: 84, y: 489}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: big leaf2
+    spriteName: big leaf2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e57a1cd9b1d304447907ad8dfcf3846d
+    layerID: 10
+    mosaicPosition: {x: 564, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: big leaf1
+    spriteName: big leaf1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ebd2d41cecaecff47995819cb8e7c3c5
+    layerID: 6
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Background
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ac9daa60437e82c42b6af0962dddbf17
+    layerID: 1
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  mosaicPSDLayers: []
+  rigPSDLayers: []
+  sharedRigPSDLayers: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

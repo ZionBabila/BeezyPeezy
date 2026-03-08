@@ -1,21 +1,38 @@
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 
+// 1. Simple Enum for Color IDs
+public enum FlowerID { Pink, Yellow, Blue, Purple, White, Red }
+
+// 2. Data structure for a single flower in a wave
+[System.Serializable]
+public struct FlowerSpawnData
+{
+    public FlowerID flowerID; 
+    public bool isFull;       
+}
+
+// 3. Data structure for the flower templates (The "Makhsan")
 [System.Serializable]
 public class FlowerDefinition
 {
-    public string idName;         // Used for matching (e.g., "Yellow")
-    public GameObject prefab;     
-    
-    [Header("Settings")]
-    public string attributes;     
-    public bool isFullWithPollen; // True = Pickup, False = Deposit
+    public FlowerID flowerID;      
+    public bool isFullWithPollen;  
+    public GameObject prefab;      
     
     [Header("Statistics")]
     [Range(0, 100)]
     public float spawnWeight = 50f; 
+}
+
+// 4. Sequence structure for the waves - Now includes Spacing
+[System.Serializable]
+public struct FlowerWave
+{
+    public string waveName; 
+    public float verticalSpacing;        // The vertical gap between flowers in this specific wave
+    public FlowerSpawnData[] flowerSequence; 
 }
 
 public class GameManager : MonoBehaviour
@@ -27,14 +44,19 @@ public class GameManager : MonoBehaviour
 
     [Header("--- Spawning Logic ---")]
     [SerializeField] private FlowerDefinition[] availableFlowers;
-    [SerializeField] private float spawnY = 7.0f;
+    [SerializeField] private float spawnY = 8.0f; // Base height for the first flower in a wave
     [SerializeField] private float spawnXOffset = 2.1f;
-    [SerializeField] private float initialSpawnRate = 2.0f;
+    [SerializeField] private float initialSpawnRate = 3.5f; // Time between whole waves
     [SerializeField] private float difficultyMultiplier = 0.99f;
+
+    [Header("--- Sequence Settings ---")]
+    public bool useSequencing = true; 
+    public FlowerWave[] waves;        
+    private int currentWaveIndex = 0;
 
     [Header("--- Movement Engine ---")]
     [SerializeField] private float objectFallSpeed = 4f;
-    [SerializeField] private float destroyY = -6f;
+    [SerializeField] private float destroyY = -7f;
 
     private float spawnTimer;
     private float currentSpawnRate;
@@ -46,10 +68,8 @@ public class GameManager : MonoBehaviour
         Instance = this; 
         currentSpawnRate = initialSpawnRate;
     }
-    void Start()
-    {
-        UpdateScoreUI();
-    }
+
+    void Start() { UpdateScoreUI(); }
 
     void Update()
     {
@@ -62,24 +82,69 @@ public class GameManager : MonoBehaviour
         spawnTimer += Time.deltaTime;
         if (spawnTimer >= currentSpawnRate)
         {
-            SpawnFlower();
+            SpawnFlowerWave(); // Trigger the entire wave at once
             spawnTimer = 0;
-            currentSpawnRate = Mathf.Max(0.5f, currentSpawnRate * difficultyMultiplier);
+            currentSpawnRate = Mathf.Max(1.5f, currentSpawnRate * difficultyMultiplier);
         }
     }
 
-    private void SpawnFlower()
+    private void SpawnFlowerWave()
     {
         if (availableFlowers.Length == 0) return;
 
-        float xPos = (Random.value > 0.5f) ? spawnXOffset : -spawnXOffset;
-        Vector3 spawnPos = new Vector3(xPos, spawnY, 0);
+        if (useSequencing && waves.Length > 0)
+        {
+            FlowerWave wave = waves[currentWaveIndex];
+            
+            // Loop through the entire sequence of the current wave
+            for (int i = 0; i < wave.flowerSequence.Length; i++)
+            {
+                FlowerSpawnData data = wave.flowerSequence[i];
+                FlowerDefinition def = FindDefinition(data.flowerID, data.isFull);
 
-        FlowerDefinition def = GetWeightedFlower();
-        if (def == null || def.prefab == null) return;
+                if (def != null)
+                {
+                    // Calculate Y position: Base spawnY + (index * spacing)
+                    // This creates the vertical "train" effect
+                    float staggeredY = spawnY + (i * wave.verticalSpacing);
+                    
+                    // Decide side (Left/Right) randomly for each flower in the wave
+                    float xPos = (Random.value > 0.5f) ? spawnXOffset : -spawnXOffset;
+                    
+                    CreateFlower(def, new Vector3(xPos, staggeredY, 0));
+                }
+            }
 
-        GameObject newObj = Instantiate(def.prefab, spawnPos, Quaternion.identity);
+            // Move to the next wave for the next spawn cycle
+            currentWaveIndex = (currentWaveIndex + 1) % waves.Length;
+        }
+        else
+        {
+            // Fallback: spawn a single weighted random flower if sequencing is off
+            FlowerDefinition def = GetWeightedFlower();
+            if (def != null) 
+            {
+                float xPos = (Random.value > 0.5f) ? spawnXOffset : -spawnXOffset;
+                CreateFlower(def, new Vector3(xPos, spawnY, 0));
+            }
+        }
+    }
 
+    // Helper: Finds the matching prefab from availableFlowers
+    private FlowerDefinition FindDefinition(FlowerID id, bool full)
+    {
+        foreach (var f in availableFlowers)
+        {
+            if (f.flowerID == id && f.isFullWithPollen == full) return f;
+        }
+        return null;
+    }
+
+    // Helper: Handles instantiation and registration
+    private void CreateFlower(FlowerDefinition def, Vector3 pos)
+    {
+        GameObject newObj = Instantiate(def.prefab, pos, Quaternion.identity);
+        
         FlowerState state = newObj.GetComponent<FlowerState>();
         if (state != null) state.SetVisualState(def.isFullWithPollen);
 
@@ -107,9 +172,7 @@ public class GameManager : MonoBehaviour
         {
             GameObject obj = movingObjects[i];
             if (obj == null) continue;
-
             obj.transform.Translate(Vector3.down * objectFallSpeed * Time.deltaTime);
-
             if (obj.transform.position.y < destroyY)
             {
                 activeObjectsMap.Remove(obj);
@@ -127,45 +190,42 @@ public class GameManager : MonoBehaviour
         FlowerState flowerState = hitObject.GetComponent<FlowerState>();
         if (flowerState == null) return;
 
-        // Interaction Logic
-        if (flowerState.isFull) // Try Pick up
+        string pollenID = def.flowerID.ToString();
+
+        if (flowerState.isFull) 
         {
-            bool canCollect = player.GetPollenCount() == 0 || player.currentPollenType == def.idName;
-            if (player.GetPollenCount() < player.GetMaxPollen() && canCollect)
+            if (player.AddPollen(pollenID)) 
             {
-                player.AddPollen(def.idName);
                 flowerState.SetVisualState(false);
             }
         }
-        else // Try Deposit
+        else 
         {
-            if (player.GetPollenCount() > 0 && player.currentPollenType == def.idName)
+            if (player.RemovePollen(pollenID))
             {
-                player.ResetPollen();
                 flowerState.SetVisualState(true);
-                AddScore(1); // Example scoring
+                AddScore(1);
             }
         }
     }
+
     private void AddScore(int amount)
     {
         score += amount;
         UpdateScoreUI();
     }   
-private void UpdateScoreUI()
+
+    private void UpdateScoreUI()
     {
-        if (scoreText != null)
-        {
-            scoreText.text = "Score: " + score;
-        }
+        if (scoreText != null) scoreText.text = "Score: " + score;
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(new Vector3(spawnXOffset, spawnY, 0), 0.3f);
         Gizmos.DrawWireSphere(new Vector3(-spawnXOffset, spawnY, 0), 0.3f);
-
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(new Vector3(-5, destroyY, 0), new Vector3(5, destroyY, 0));
+        Gizmos.DrawLine(new Vector3(-10, destroyY, 0), new Vector3(10, destroyY, 0));
     }
 }
